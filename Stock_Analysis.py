@@ -17,9 +17,9 @@ price = float(soup.find(class_='YMlKec fxKbKc').text.strip()[1:].replace(",", ""
 prev_close = float(soup.find(class_='P6K39c').text.strip()[1:].replace(",", ""))
 revenue = soup.find(class_='QXDnM').text
 news = soup.find(class_='Yfwt5').text
-about = soup.find(class_='bLLb2d').text
+#about = soup.find(class_='bLLb2d').text
 
-dict1 = {'Price' : price, 'Previous Close' : prev_close, 'Revenue' : revenue, 'News' : news, 'About' : about}
+dict1 = {'Price' : price, 'Previous Close' : prev_close, 'Revenue' : revenue, 'News' : news}
 
 df=pd.DataFrame(dict1, index=['Extracted Data']).T
 
